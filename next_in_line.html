@@ -1,0 +1,17 @@
+<body>
+    <script>
+        function nextInLine(arr, item) {
+            // push item onto the end of the queue.
+            // shift and return the item at the start of the queue.
+            arr.push(item)
+            return arr.shift();
+        }
+
+        var testArr = [1, 2, 3, 4, 5];
+
+        console.log(testArr)
+        console.log("Before:" + JSON.stringify(testArr));
+        console.log("Next in line: " + nextInLine(testArr, 6));
+        console.log("After:" + JSON.stringify(testArr));
+    </script>
+</body>
