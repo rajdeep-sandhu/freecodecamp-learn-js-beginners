@@ -1,0 +1,12 @@
+function wordBlanks(noun, adjective, verb, adverb) {
+    // Returns a sentence built from the supplied words.
+    var result;
+
+    result = "The " + adjective + " " + noun + " " +
+        verb + " to the store " + adverb + ".";
+
+    return result; 
+}
+
+console.log(wordBlanks("dog", "big", "ran", "quickly"))
+console.log(wordBlanks("bike", "wobbly", "flew", "slowly"))
