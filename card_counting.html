@@ -1,0 +1,44 @@
+<body>
+    <script>
+        var count = 0;
+
+        function countCard(card) {
+            // Count increases on a low card, decreases on a high card,
+            // and stays the same on a middle value card.
+            // The player should bet high when the count is positive,
+            // and low (hold) when it is 0 or negative.
+            
+            switch(card) {
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                    count++;
+                    break;
+                case 10:
+                case "J":
+                case "K":
+                case "Q":
+                case "A":
+                    count--;
+                    break;
+            }
+
+            var holdBet = "Hold";
+
+            if (count > 0) {
+                holdBet = "Bet";
+            }
+
+            return count + ": " + holdBet;
+        }
+
+        countCard(2);
+        countCard(3);
+        countCard(7);
+        countCard('K');
+        countCard('A');
+        console.log(countCard(4))
+    </script>
+</body>
