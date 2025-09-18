@@ -1,0 +1,23 @@
+<body>
+    <script>
+        function multiplyAll(inputArray) {
+            // recursively multiply elements of nested arrays
+            let product = 1;
+
+            // console.log(inputArray.Length);
+            for (let i = 0; i < inputArray.length; i++) {
+                if (Array.isArray(inputArray[i])) {
+                    product *= multiplyAll(inputArray[i]);
+                } else {
+                    product *= inputArray[i];
+                }
+            }
+
+            return product;
+        }
+
+        var arr = [[1, 2], [3, 4], [5, 6, 7]];
+        console.log(arr);
+        console.log(multiplyAll(arr));
+    </script>
+</body>
