@@ -1,0 +1,16 @@
+<body>
+    <script>
+        const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+        const squarePositiveIntegers = (arr) => {
+            const squaredIntegers = arr
+                .filter(x => Number.isInteger(x) && x > 0)
+                .map(x => x ** 2);
+            return squaredIntegers;
+        }
+
+        // Return a list of squared positive integers from the supplied list
+        const squaredIntegers = squarePositiveIntegers(realNumberArray);
+        console.log(squaredIntegers)
+    </script>
+</body>
