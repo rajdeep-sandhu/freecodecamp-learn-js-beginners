@@ -1,0 +1,14 @@
+<body>
+    <script>
+        const increment = (function() {
+            return function increment(num, value = 1) {
+                return num + value;
+            }
+        })();
+        
+        // Increment by value which defaults to 1 if none is supplied.
+        // This is not a true higher order function but an IIFE tha returns a function.
+        console.log(increment(5, 2));
+        console.log(increment(5));
+    </script>
+</body>
