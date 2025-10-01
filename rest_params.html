@@ -1,0 +1,15 @@
+<body>
+    <script>
+        const sum = (function() {
+            return function sum(...args) {
+                return args.reduce((a, b) => a + b, 0);
+            }
+        })();
+
+        console.log(sum(1, 2, 3, 4))
+
+        const [entree, mainCourse, ...sides] = ["nachos", "paella", "chorizo", "aceitunas con pimientos"]
+
+        console.log(sides)
+    </script>
+</body>
