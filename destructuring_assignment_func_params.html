@@ -16,7 +16,15 @@
             };
         })();
 
-        console.log(stats)
-        console.log(half(stats))
+        // Using destructuring assignment.
+        const half2 = (function () {
+                return function half2({ max, min }) {
+                    return (max + min) / 2.0;
+                };
+            })();
+
+        console.log(stats);
+        console.log(half(stats));
+        console.log(half2(stats));
     </script>
 </body>
