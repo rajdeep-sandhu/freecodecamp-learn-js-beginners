@@ -1,0 +1,36 @@
+<body>
+    <script>
+        // Constructor function to create an Object
+        var spaceShuttle = function(targetPlanet) {
+            this.targetPlanet = targetPlanet
+        };
+
+        var zeus = new spaceShuttle("Jupiter");
+
+        console.log(zeus.targetPlanet)
+
+        // Class syntax to create an Object
+        class spaceShip {
+            constructor(targetPlanet) {
+                this.targetPlanet = targetPlanet;
+            }
+        }
+
+        var trident = new spaceShip("Neptune");
+        console.log(trident.targetPlanet)
+
+        // Function to return a class
+        function makeClass() {
+            class Vegetable {
+                constructor(name) {
+                    this.name = name;
+                }
+            }
+            return Vegetable;
+        }
+
+        const vegetable = makeClass();
+        const carrot = new vegetable("carrot");
+        console.log(carrot.name)
+    </script>
+</body>
