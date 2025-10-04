@@ -1,0 +1,24 @@
+<body>
+    <script>
+        // Template literals example to make a list of html strings from Object
+        const result = {
+            success: ["max-length", "no-amd", "prefer-arrow-functions"],
+            failure: ["no-var", "var-on-top", "linebreak"],
+            skipped: ["id-blacklist", "no-dup-keys"]
+        };
+
+        function makeList(arr) {
+            const resultDisplayArray = [];
+
+            for (let i=0; i < arr.length; i++) {
+                let htmlTemplate = `<li class="text-warning">${arr[i]}</li>`
+                resultDisplayArray.push(htmlTemplate);
+            }
+            return resultDisplayArray;
+        }
+
+        const resultDisplayArray = makeList(result.failure);
+        console.log(resultDisplayArray)
+
+    </script>
+</body>
